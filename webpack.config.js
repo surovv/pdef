@@ -7,7 +7,6 @@ const joinToDirname = pth => path.join(__dirname, pth);
 
 module.exports = {
   cache: true,
-  devtool: 'eval',
 
   entry:  {
     pdef: joinToDirname('/src/pdef.js'),
@@ -26,7 +25,7 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: JSON.stringify({
-          presets: ['es2015', 'stage-0'],
+          presets: ['env', 'stage-0'],
         })
       }
     ]
